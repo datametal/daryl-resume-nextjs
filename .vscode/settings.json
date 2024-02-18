@@ -1,15 +1,18 @@
 {
-  "editor.tabSize": 2,
-  "editor.detectIndentation": false,
-  "search.exclude": {
-    "package-lock.json": true
-  },
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  "editor.formatOnSave": false,
-  "editor.codeActionsOnSave": [
+  "keyboard.dispatch": "keyCode",
+  "workbench.editor.enablePreview": false,
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "terminal.integrated.fontFamily": "RobotoMono Nerd Font",
+  "synthwave84.brightness": 0.85,
+  "editor.fontLigatures": true,
+  "editor.fontSize": 18,
+  "glassit.alpha": 255,
+  "glassit.step": 1,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
     "source.addMissingImports",
-    "source.fixAll.eslint"
-  ],
+  },
+  "editor.formatOnSave": true,
   "typescript.tsdk": "node_modules/typescript/lib", // Use the workspace version of TypeScript
   "typescript.enablePromptUseWorkspaceTsdk": true, // For security reasons it's require that users opt into using the workspace version of typescript
   "typescript.preferences.autoImportFileExcludePatterns": [
@@ -18,18 +21,92 @@
     "next/dist/client/router.d.ts"
   ],
   "typescript.preferences.preferTypeOnlyAutoImports": true, // Prefer type-only imports
-  "jest.autoRun": {
-    "watch": false // Start the jest with the watch flag
-    // "onStartup": ["all-tests"] // Run all tests upon project launch
+  "files.autoSave": "onFocusChange",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "workbench.colorTheme": "One Dark Pro Darker",
+  "editor.minimap.enabled": false,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.formatOnPaste": true,
+  "window.zoomLevel": 1,
+  "workbench.iconTheme": "eq-material-theme-icons-darker",
+  "editor.tokenColorCustomizations": {
+    "[*Light*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#000"
+          }
+        }
+      ]
+    },
+    "[*Dark*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#fff"
+          }
+        }
+      ]
+    },
+    "textMateRules": [
+      {
+        "name": "One Dark italic",
+        "scope": [
+          "comment",
+          "entity.other.attribute-name",
+          "keyword",
+          "markup.underline.link",
+          "storage.modifier",
+          "storage.type",
+          "string.url",
+          "variable.language.super",
+          "variable.language.this"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "name": "One Dark italic reset",
+        "scope": [
+          "keyword.operator",
+          "keyword.other.type",
+          "storage.modifier.import",
+          "storage.modifier.package",
+          "storage.type.built-in",
+          "storage.type.function.arrow",
+          "storage.type.generic",
+          "storage.type.java",
+          "storage.type.primitive"
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
   },
-  "jest.showCoverageOnLoad": true, // Show code coverage when the project is launched
-  "jest.autoRevealOutput": "on-exec-error", // Don't automatically open test explorer terminal on launch
-  // Multiple language settings for json and jsonc files
   "[json][jsonc][yaml]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "prettier.ignorePath": ".gitignore", // Don't run prettier for files listed in .gitignore
-  "i18n-ally.localesPaths": ["src/locales"],
-  "i18n-ally.keystyle": "nested"
+  "editor.suggestSelection": "first",
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "typescript.validate.enable": false,
+  "css.lint.unknownAtRules": "ignore",
+  "css.validate": true,
+  "scss.validate": true,
+  "search.exclude": {
+    "**/node_modules": true,
+    "typescript.validate.enable": false,
+    "javascript.validate.enable": false,
+    "package-lock.json": true
+  },
+  "tabnine.experimentalAutoImports": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "redhat.telemetry.enabled": false
 }
